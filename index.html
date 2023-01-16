@@ -97,8 +97,14 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="图片测试……？"><a href="#图片测试……？" class="headerlink" title="图片测试……？"></a>图片测试……？</h2><p>能看见吗？<br><img src="/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/103041518_p0.jpg" alt="图片"></p>
-
+        <h2 id="图片测试……？"><a href="#图片测试……？" class="headerlink" title="图片测试……？"></a>图片测试……？</h2><p>能看见吗？<br><img src="/2023/01/16/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/103041518_p0.jpg" alt="完整链接"><br><img src="/2023/01/16/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/103041518_p0.jpg" alt="不完全链接"></p>
+<p>实际操作时，hexo 会给文件夹套进一串文件夹嵌套，比如说今天是2023年1月16日，套完前面会多一个2023&#x2F;01&#x2F;16&#x2F;</p>
+<blockquote>
+<p>操作方法：</p>
+<p>安装插件 hexo-asset-image<br>config 里的 post_asset_folder 改为 ture<br>然后新生成的 md 就有了伴生图片文件夹，把图片放进去<br>要使用的话，日期 + 文件夹 + 文件名<br>例如：<code>![图片](2023/01/16/图片测试/103041518_p0.jpg &quot;&quot;)</code></p>
+</blockquote>
+<hr>
+<h2 id="官方方法"><a href="#官方方法" class="headerlink" title="官方方法"></a>官方方法</h2>
       
     </div>
     <footer class="article-footer">
@@ -106,6 +112,8 @@
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+
     </footer>
   </div>
   
@@ -385,7 +393,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+      <a href="/tags/test/" style="font-size: 20px;">test</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
     </div>
   </div>
 
