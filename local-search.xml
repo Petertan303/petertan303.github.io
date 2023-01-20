@@ -29,7 +29,7 @@
     <link href="/2023/01/20/2023%E5%B9%B41%E6%9C%8820%E6%97%A5/"/>
     <url>/2023/01/20/2023%E5%B9%B41%E6%9C%8820%E6%97%A5/</url>
     
-    <content type="html"><![CDATA[<h2 id="关于阿里云ESC的应用"><a href="#关于阿里云ESC的应用" class="headerlink" title="关于阿里云ESC的应用"></a>关于阿里云ESC的应用</h2><p>本质是一个可租赁服务器。<br>要用于搭建博客，需要安装<code>Apache</code>（服务器软件）、<code>MariaDB数据库</code>（或者MySql）、<code>PHP</code>，然后通过<code>WordPress</code>完成博客的搭建。</p><p><a href="/2023/01/20/index.html">CSS的学习笔记</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="关于阿里云ESC的应用"><a href="#关于阿里云ESC的应用" class="headerlink" title="关于阿里云ESC的应用"></a>关于阿里云ESC的应用</h2><p>本质是一个可租赁服务器。<br>要用于搭建博客，需要安装<code>Apache</code>（服务器软件）、<code>MariaDB数据库</code>（或者MySql）、<code>PHP</code>，然后通过<code>WordPress</code>完成博客的搭建。</p><p><a href="/2023/01/20/%E8%AF%95%E5%9B%BE%E5%AD%A6%E4%B9%A0CSS/">CSS的学习笔记</a></p>]]></content>
     
     
     
