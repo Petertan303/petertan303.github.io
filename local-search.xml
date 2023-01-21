@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>2023年1月21日</title>
+    <link href="/2023/01/21/2023%E5%B9%B41%E6%9C%8821%E6%97%A5/"/>
+    <url>/2023/01/21/2023%E5%B9%B41%E6%9C%8821%E6%97%A5/</url>
+    
+    <content type="html"><![CDATA[<h2 id="http-server"><a href="#http-server" class="headerlink" title="http-server"></a>http-server</h2><p><code>http-server</code>可以通过在本地文件夹内运行来实现预览网站的功能。或者说，让任意一个目录成为服务器的目录。<br>默认打开<code>index.html</code>，如果没有，会生成一个默认网页，里面有文件夹内所有内容。  </p><p>一般默认的网址为<code>192.168.1.2:8081</code>和<code>127.0.0.1:8081</code>，前者可以通过在同一路由下的其他设备访问，后者只能在本设备内查看。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>日志</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>试图学习CSS</title>
     <link href="/2023/01/20/%E8%AF%95%E5%9B%BE%E5%AD%A6%E4%B9%A0CSS/"/>
     <url>/2023/01/20/%E8%AF%95%E5%9B%BE%E5%AD%A6%E4%B9%A0CSS/</url>
