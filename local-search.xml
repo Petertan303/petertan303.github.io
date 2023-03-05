@@ -4,6 +4,38 @@
   
   
   <entry>
+    <title>jj</title>
+    <link href="/2023/03/05/jj/"/>
+    <url>/2023/03/05/jj/</url>
+    
+    <content type="html"><![CDATA[<p>AI绘画基于本地的python<br>,python具体是啥还需自学。linux指令略知一二，ls ls-，rm，cd，ssh，hexo。。。</p><p>非常多，还需自学。</p><p>香橙派类似于一微型电脑，有一具体应用程序，可以进行相应指令输入，</p><p>阿里云盘。。</p><p>从头开始学习python以及linux，学习到何种程度具体情况具体分析。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>2023年3月5日</title>
+    <link href="/2023/03/05/2023%E5%B9%B43%E6%9C%885%E6%97%A5/"/>
+    <url>/2023/03/05/2023%E5%B9%B43%E6%9C%885%E6%97%A5/</url>
+    
+    <content type="html"><![CDATA[<p>买的小音箱给送到南京去了。</p><table><thead><tr><th>物件</th><th>价格</th><th>购买平台</th><th>备注</th></tr></thead><tbody><tr><td>orange pi zero 2 本体 + 扩展板</td><td>158.90</td><td>淘宝</td><td>12元运费，总计170.90</td></tr><tr><td>闪迪64G内存卡 套餐</td><td>41.90</td><td>淘宝</td><td>-</td></tr><tr><td>0.5m hdmi线</td><td>0.99</td><td>淘宝</td><td>特惠买的，没啥用</td></tr><tr><td>usb 转 ttl 刷机板</td><td>4.00</td><td>淘宝</td><td>-</td></tr><tr><td>5v xh2.54 风扇</td><td>2.00</td><td>淘宝</td><td>-</td></tr><tr><td>5v3a 电源</td><td>7.00</td><td>淘宝</td><td>卖家未发货，退款</td></tr><tr><td>蓝牙音箱</td><td>11.9</td><td>拼多多</td><td>送到南京去了</td></tr><tr><td>总计</td><td>238.69</td><td>-</td><td>-</td></tr></tbody></table><h1 id="orange-pi-zero-2-进展"><a href="#orange-pi-zero-2-进展" class="headerlink" title="orange pi zero 2 进展"></a>orange pi zero 2 进展</h1><p>我的香橙派连接的是寝室网络，一直在纠结要如何在寝室外使用。</p><p>刚刚意识到可以直接通过 ttl 串口登录香橙派，不一定需要 ssh 或远程桌面或显示屏。这样只需要带上电脑和 ttl 转接头和杜邦线就行了。</p><h2 id="下一步计划是-GUI-制作。-Microwindows-MiniGui-QT-Gtk-OpenGUI-FLTK-LingLongGUI-LearningGUI"><a href="#下一步计划是-GUI-制作。-Microwindows-MiniGui-QT-Gtk-OpenGUI-FLTK-LingLongGUI-LearningGUI" class="headerlink" title="下一步计划是 GUI 制作。- Microwindows- MiniGui- QT- Gtk+- OpenGUI- FLTK- LingLongGUI- LearningGUI"></a>下一步计划是 GUI 制作。<br>- Microwindows<br>- MiniGui<br>- QT<br>- Gtk+<br>- OpenGUI<br>- FLTK<br>- LingLongGUI<br>- LearningGUI</h2><h1 id="今天做了什么"><a href="#今天做了什么" class="headerlink" title="今天做了什么"></a>今天做了什么</h1><p>买了大物实验II的实验书、买了数字系统实验II的书和报告册。</p><p>然后上午摸鱼摸了一上午。</p><h2 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h2><ul><li>周一<ul><li>电磁场与波</li><li>信号与系统<ul><li>需要作业本</li></ul></li><li>IT英语<ul><li>暂时没有作业，潜在项目</li></ul></li><li>神经网络导论</li></ul></li><li>周二<ul><li>美术鉴赏</li><li>微处理器与嵌入式系统<ul><li>可能有</li></ul></li><li>人工智能基础</li><li>大物实验II<ul><li>预习实验？</li></ul></li></ul></li><li>周三<ul><li>python语言程序设计及其应用<ul><li>似乎有作业</li></ul></li></ul></li><li>周四<ul><li>数字系统实验<ul><li>asd</li></ul></li><li>学术规范与论文写作</li></ul></li><li>周五<ul><li>唐球</li></ul></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>日志</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2023年3月4日</title>
     <link href="/2023/03/04/2023%E5%B9%B43%E6%9C%884%E6%97%A5/"/>
     <url>/2023/03/04/2023%E5%B9%B43%E6%9C%884%E6%97%A5/</url>
@@ -11,6 +43,12 @@
     <content type="html"><![CDATA[<p>买了<code>香橙派 zero 2</code>，租了阿里云服务器。</p><h1 id="阿里云服务器"><a href="#阿里云服务器" class="headerlink" title="阿里云服务器"></a>阿里云服务器</h1><p>已经实现的：</p><ul><li>ftp 服务器安装</li><li>wordpress 服务器安装</li><li>远程桌面 vnc 安装</li><li>MySql 数据库</li><li></li></ul><h1 id="香橙派-zero-2"><a href="#香橙派-zero-2" class="headerlink" title="香橙派 zero 2"></a>香橙派 zero 2</h1><p><strong>最近一直在摆弄。安装过程中，碰上的问题：</strong></p><ul><li>烧录错误镜像</li><li><code>Paragon ExtFS for Windows</code>无法读取 sd 卡内容</li></ul><p>成功配置了 wi-fi，ssh，音乐播放，安装桌面</p><p><strong>烧录镜像完成后，遇到的问题有：</strong></p><ul><li>端口设置开放：<ul><li>先用<code>iptables -I INPUT -p tcp --dport 端口号 -j ACCEPT</code> 设置需要开放端口号、权限、协议</li><li><code>iptables-save</code>保存</li><li><code>sudo netfilter-persistent save</code>永久保存</li><li>下一次使用需要<code>sudo netfilter-persistent reload</code></li></ul></li><li>ftp 搭建失败<ul><li>未解决</li></ul></li><li>aplay 调节音量：差点把自己弄聋（开玩笑）<ul><li><code>man aplay</code>查看帮助</li><li><code>aplay -D plughw:0,0 xxx.wav</code>指定播放设备</li><li><code>alsamixer</code>设置音量</li></ul></li><li>broot 安装失败<ul><li>直接下载安装包，未解决</li></ul></li><li>git 无法提交<ul><li>重新设置 putty</li><li>push 的时候卡在最后：添加参数<code>sendpack.sideband</code><ul><li><code>git config --global sendpack.sideband false</code></li><li><code>git config --local sendpack.sideband false</code></li></ul></li><li>网络更换手机热点</li></ul></li><li>conda 很慢很卡<ul><li>安装mamba</li></ul></li><li>安装 vnc 失败<ul><li>未解决</li></ul></li><li>解压 rar<ul><li>需要 <code>unrar e 包名</code>（直接解压）或 <code>unrar x 包名</code>（创建新目录）</li></ul></li><li></li><li></li></ul><p>买了风扇、蓝牙音箱等等配件。</p><p><strong>清单：</strong></p><table><thead><tr><th>物件</th><th>价格</th><th>购买平台</th><th>备注</th></tr></thead><tbody><tr><td>orange pi zero 2 本体 + 扩展板</td><td>158.90</td><td>淘宝</td><td>12元运费</td></tr><tr><td>闪迪64G内存卡 套餐</td><td>41.90</td><td>淘宝</td><td></td></tr><tr><td>0.5m hdmi线</td><td>0.99</td><td>淘宝</td><td>特惠买的，没啥用</td></tr><tr><td>usb 转 ttl 刷机板</td><td>4.00</td><td>淘宝</td><td></td></tr><tr><td>5v xh2.54 风扇</td><td>2.00</td><td>淘宝</td><td></td></tr><tr><td>5v3a 电源</td><td>7.00</td><td>淘宝</td><td>卖家未发货，退款</td></tr><tr><td>蓝牙音箱</td><td>11.9</td><td>拼多多</td><td>本来打算买有线喇叭，脑子一热就买了</td></tr></tbody></table><h1 id="vist"><a href="#vist" class="headerlink" title="vist"></a>vist</h1><p><strong>借龚的电脑跑出了模型。遇到的问题有：</strong></p><ul><li>安装包需要 anaconda</li><li>pip 换源<ul><li>临时：<code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</code></li><li>永久：<code>pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</code></li></ul></li><li>numpy 和 python 版本不匹配<ul><li>卸载重装</li></ul></li><li>安装 cuda<ul><li>官网下载安装</li><li>占用储存巨大</li></ul></li><li>requirements.txt 依赖没写完整<ul><li>手动安装依赖</li></ul></li><li>pip、conda 无法卸载 python<ul><li>用 conda 直接安装 另一个版本的 python</li><li>或者用 anaconda 创建一个全新环境，创建时配置默认 python<ul><li>但是储存占用……好吧、必要的牺牲</li></ul></li></ul></li></ul><p><strong>我自己电脑配置环境，遇到的问题：</strong></p><ul><li>最大问题：显存过小，至少需要 4.3G 而我只有 4G</li><li>conda 无法更换 python 版本</li><li>同龚</li></ul><p>但是龚的电脑可以随便折腾，不用担心储存不够。真的爽！</p><h1 id="stable-diffusion-绘图"><a href="#stable-diffusion-绘图" class="headerlink" title="stable-diffusion 绘图"></a>stable-diffusion 绘图</h1><p>时间太久了，想不起来，下次再写</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>日志</tag>
+      
+    </tags>
     
   </entry>
   
