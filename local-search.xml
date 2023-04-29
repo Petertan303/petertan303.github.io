@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Numpy 和 Matplotlib 的使用</title>
+    <link href="/2023/04/26/Numpy-%E5%92%8C-Matplotlib-%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <url>/2023/04/26/Numpy-%E5%92%8C-Matplotlib-%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<p>首先，<code>import</code>一下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> matplotlib<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br></code></pre></td></tr></table></figure><h1 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h1><pre><code class="hljs">Numpy是Python的一个科学计算的库，提供了矩阵运算的功能，其一般与Scipy、matplotlib一起使用。其实，list已经提供了类似于矩阵的表示形式，不过numpy为我们提供了更多的函数。</code></pre><p>**操作的对象有两种，一种是 <code> N 维数组对象 ndarray</code>，另一种是<code>矩阵 matrix</code>**。</p><p>数据类型也很多，虽然不需要像C一样指定，但数据确实是有数据类型的。</p><h3 id="创建一个-ndarry-对象"><a href="#创建一个-ndarry-对象" class="headerlink" title="创建一个 ndarry 对象"></a>创建一个 ndarry 对象</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python">numpy.array(<span class="hljs-built_in">object</span>, dtype = <span class="hljs-literal">None</span>, copy = <span class="hljs-literal">True</span>, order = <span class="hljs-literal">None</span>, subok = <span class="hljs-literal">False</span>, ndmin = <span class="hljs-number">0</span>)<br><span class="hljs-comment"># 必须的只有object，也就是数组对象，新建的 ndarry 内容和 object 完全一致。</span><br><span class="hljs-comment"># 可以输入多个 object，这样会被视为多维度 ndarry。</span><br><span class="hljs-comment"># </span><br><br>numpy.empty(shape, dtype = <span class="hljs-built_in">float</span>, order = <span class="hljs-string">&#x27;C&#x27;</span>)<br><br>numpy.asarray(a, dtype = <span class="hljs-literal">None</span>, order = <span class="hljs-literal">None</span>)<br><br>numpy.frombuffer(buffer, dtype = <span class="hljs-built_in">float</span>, count = -<span class="hljs-number">1</span>, offset = <span class="hljs-number">0</span>)<br><br>numpy.fromiter(iterable, dtype, count=-<span class="hljs-number">1</span>)<br><br>numpy.arange(start, stop, step, dtype)<br><br>np.linspace(start, stop, num=<span class="hljs-number">50</span>, endpoint=<span class="hljs-literal">True</span>, retstep=<span class="hljs-literal">False</span>, dtype=<span class="hljs-literal">None</span>)<br><br>np.logspace(start, stop, num=<span class="hljs-number">50</span>, endpoint=<span class="hljs-literal">True</span>, base=<span class="hljs-number">10.0</span>, dtype=<span class="hljs-literal">None</span>)<br><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2023年4月23日</title>
     <link href="/2023/04/23/2023%E5%B9%B44%E6%9C%8823%E6%97%A5/"/>
     <url>/2023/04/23/2023%E5%B9%B44%E6%9C%8823%E6%97%A5/</url>
