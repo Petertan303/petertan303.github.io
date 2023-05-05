@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>评论测试</title>
+    <link href="/2023/05/05/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/"/>
+    <url>/2023/05/05/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</url>
+    
+    <content type="html"><![CDATA[<head>    <script src='//unpkg.com/valine/dist/Valine.min.js'></script></head><body>    <div id="vcomments"></div>    <script>        new Valine({            el: '#vcomments',            appId: 'mV6pM4FkddUR4CfQioaXxMrp-9Nh9j0Va',            appKey: 'YvR7UmmLPsWePIigEYzEjLuy'        })    </script></body>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2023年5月5日</title>
     <link href="/2023/05/04/2023%E5%B9%B45%E6%9C%885%E6%97%A5/"/>
     <url>/2023/05/04/2023%E5%B9%B45%E6%9C%885%E6%97%A5/</url>
