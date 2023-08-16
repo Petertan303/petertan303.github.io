@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Django 学习</title>
+    <link href="/2023/08/10/2023%E5%B9%B48%E6%9C%8810%E6%97%A5/"/>
+    <url>/2023/08/10/2023%E5%B9%B48%E6%9C%8810%E6%97%A5/</url>
+    
+    <content type="html"><![CDATA[<p>正在学习 Django，和半吊子 mysql。</p><p>顺便练习键盘盲打……之前一直是一指禅野路子，现在眼睛也离不开键盘。</p><p>命令行里面使用就是 django-admin，注意不是django。python包是django</p><p>（正在看网课 <url=前端+MySQL+Django><a href="https://www.bilibili.com/video/BV1qW4y1V7ky?p=36&amp;vd_source=91ff2e0c9c276605072aa920b7fb2501">https://www.bilibili.com/video/BV1qW4y1V7ky?p=36&amp;vd_source=91ff2e0c9c276605072aa920b7fb2501</a> </url>）</p><p>顺带一提，Windows快速切换桌面是 win+ctrl+方向</p><h1 id="各个文件分工"><a href="#各个文件分工" class="headerlink" title="各个文件分工"></a>各个文件分工</h1><h2 id="asgi-和-wsgi"><a href="#asgi-和-wsgi" class="headerlink" title="asgi 和 wsgi"></a>asgi 和 wsgi</h2><p>涉及请求，一个同步一个异步，一般来说不需要更改。</p><h2 id="urls"><a href="#urls" class="headerlink" title="urls"></a>urls</h2><p>对应python函数和网站的url，使用比较频繁。</p><h2 id="settings"><a href="#settings" class="headerlink" title="settings"></a>settings</h2><p>配置文件，需要连接数据库，注册app，等等操作。</p><h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><h2 id="manage"><a href="#manage" class="headerlink" title="manage"></a>manage</h2><p>和其他的不在一起，在外面。</p><p>最常用的文件。</p><h1 id="APP的概念"><a href="#APP的概念" class="headerlink" title="APP的概念"></a>APP的概念</h1><p>大型项目中的某些功能。不同app可以拥有独立的表结构，html模板，css，不会相互影响。</p><p>但是一般来说多app的项目就是比较复杂的了。</p><p>可以通过 python manage.py startapp app01 这种形式来创建应用。新应用回合项目本体一样有自己的文件夹。</p><h2 id="apps"><a href="#apps" class="headerlink" title="apps"></a>apps</h2><p>不需要更改</p><h2 id="tests"><a href="#tests" class="headerlink" title="tests"></a>tests</h2><p>单元测试用的</p><h2 id="views"><a href="#views" class="headerlink" title="views"></a>views</h2><p>用于和 urls.py 里面的函数对应，所谓视图函数。</p><h2 id="models"><a href="#models" class="headerlink" title="models"></a>models</h2><p>专门操作数据库，使用orm，可以取代pymysql。</p><h2 id="admin"><a href="#admin" class="headerlink" title="admin"></a>admin</h2><p>默认提供后台管理功能，一般不使用。</p><h2 id="主要就是-views-和-models-这两个"><a href="#主要就是-views-和-models-这两个" class="headerlink" title="主要就是 views 和 models 这两个"></a>主要就是 views 和 models 这两个</h2><h1 id="基本使用步骤"><a href="#基本使用步骤" class="headerlink" title="基本使用步骤"></a>基本使用步骤</h1><ul><li><p>首先需要创建并注册 app：在setting的installed_apps这个列表里面注册，具体来说就是添加字符串，内容为形如 app01.apps.app01config 之类的类，这个类里面应该包含 app01 所需要的注册信息。</p></li><li><p>然后编写一个 urls 和 apps 的对应关系：编写 urls 文件。</p></li><li><p>然后编写一个视图函数 views，需要有一个函数 （例如index），这个函数 index 必须有一个参数 request 。这个函数中，可以使用httpresponse()之类的方法返回文字信息，也可以通过更加复杂的方法返回其他信息。</p></li><li><p>启动 django 程序：使用 python manage.py runserver</p></li></ul><p>总结一下就是一般网站配置 urls 和 views 即可，如果需要访问数据库则需要 models。每一个 url 可以对应一个函数。</p><h1 id="模板，和静态文件"><a href="#模板，和静态文件" class="headerlink" title="模板，和静态文件"></a>模板，和静态文件</h1><p>templates 模板的使用：</p><p>views文件的函数返回render()，参数为request和html模板文件名，例如return render(request,”asd.html”)</p><p>其中，默认情况下，程序会在app的templates目录下寻找html模板文件。如果setting里面配置了TEMPLATES里面的DIRS，则会改变。</p><h2 id="静态文件：例如CSS，图片，js"><a href="#静态文件：例如CSS，图片，js" class="headerlink" title="静态文件：例如CSS，图片，js"></a>静态文件：例如CSS，图片，js</h2><p>静态文件放在app 目录底下的 static 文件夹底下</p><p>一般来说， static 文件夹底下还会有css，img，plungins，js等等细分文件，方便管理</p><p>注意少使用绝对路径，可以使用 { % load static % } 之类的</p><h1 id=""><a href="#" class="headerlink" title="#"></a>#</h1>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>VITS 论文阅读-3</title>
     <link href="/2023/06/14/VITS-%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-3/"/>
     <url>/2023/06/14/VITS-%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-3/</url>
