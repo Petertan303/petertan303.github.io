@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>nginx反代服务器的部署</title>
+    <link href="/2023/10/18/nginx%E5%8F%8D%E4%BB%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%83%A8%E7%BD%B2/"/>
+    <url>/2023/10/18/nginx%E5%8F%8D%E4%BB%A3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%83%A8%E7%BD%B2/</url>
+    
+    <content type="html"><![CDATA[<p>django 的 runserver 仅仅是用于测试，正式部署还是需要正经的服务器软件，例如 apache，nginx。如果不正式部署，服务可能会不稳定，且无法通过 80、443 等端口通信，而且处理并发问题和异常处理也可能会出问题。另外，静态文件也是需要交给服务器软件掌管，django 并没有提供可靠的相应的组件。总之就是，专业的事情，还是要交给专业的软件完成。</p><h2 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h2><p>我选择的是 nginx，配合 uwsgi 作为中转，正式部署我 django 的程序。</p><p>三者形成一个链条结构，django 的信息被 uwsgi 接受，通过特定端口转发；通过这个特定端口，nginx 会接受 uwsgi 的信息，配合静态文件进行渲染网页的等操作，并向 80 或 443 传递最终的响应。</p><h2 id="django-的配置"><a href="#django-的配置" class="headerlink" title="django 的配置"></a>django 的配置</h2><p>和我之前所述项目一样，django 起到一个简化前后端编写的作用，实际 python 代码量并不多，但能起到大量 php 代码才能起到的作用。</p><p>首先就是收集静态文件， django collectstatic。这条指令会将所有需要的静态文件收集到一个文件夹下，即 settings.py 文件中，的 STATIC_ROOT 变量。注意，这里只能用 STATIC_ROOT 而不是 STATICFILE_DIRS 变量，当然如果手动收集，那其实无所谓。</p><h2 id="uwsgi-的配置"><a href="#uwsgi-的配置" class="headerlink" title="uwsgi 的配置"></a>uwsgi 的配置</h2><p>创建一个简单的 ini 配置文件，配置中转端口、并发数。</p><h2 id="nginx-的配置"><a href="#nginx-的配置" class="headerlink" title="nginx 的配置"></a>nginx 的配置</h2><p>很重要的一点是，默认的配置文件由两部分，一部分是外层，在 /etc/nginx/ 下，是 nginx.conf；另一部分是内层，在 /etc/nginx/sites_enabled/ 下。</p><p>外层中，可以设置 nginx 用户，如果权限不够，在查找静态文件的时候会报 403 错误，这个问题着实困扰了我很久很久！！</p><p>内层就是进行一些琐碎的配置，但不多，也就一百行以内。比如说端口，静态文件位置，比如说 ssl 会用到的证书存放位置，这些。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>很简单的一个小项目，但是被我死磕了一周，捏麻的。</p><p>话说我个硬件人怎么会跑来搞服务器部署？？？</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于LLaMA大语言模型</title>
     <link href="/2023/09/20/%E5%85%B3%E4%BA%8ELLaMA%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/"/>
     <url>/2023/09/20/%E5%85%B3%E4%BA%8ELLaMA%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</url>
