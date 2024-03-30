@@ -4,6 +4,32 @@
   
   
   <entry>
+    <title>2024年3月30日交错战线机器人</title>
+    <link href="/2024/03/30/2024%E5%B9%B43%E6%9C%8830%E6%97%A5%E4%BA%A4%E9%94%99%E6%88%98%E7%BA%BF%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    <url>/2024/03/30/2024%E5%B9%B43%E6%9C%8830%E6%97%A5%E4%BA%A4%E9%94%99%E6%88%98%E7%BA%BF%E6%9C%BA%E5%99%A8%E4%BA%BA/</url>
+    
+    <content type="html"><![CDATA[<p>之前忘记加上附件类型的判断了。</p><p>我需要的附件类型只有两个，一个是静态图片，一个是动态图片。视频传不了，音频不会有。</p><p>而我需要保证的是传上去、正确的传上去。 nga 的附件发送需要提供附件名称、附件类型：</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">attachment_file1_url_utf8_name</span> = <span class="hljs-string">&quot;image_gif%2egif&quot;</span><br><span class="hljs-attr">Content_Type</span> = <span class="hljs-string">&#x27;image/gif&#x27;</span><br></code></pre></td></tr></table></figure><p>很简单。</p><p>不过，除了请求体里面需要修改，还需要在文件列表中进行修改：</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">files</span>=[<br>        (<span class="hljs-string">&#x27;attachment_file1&#x27;</span>,(filename, img, Content_Type))<br>        ]<br></code></pre></td></tr></table></figure><p>nga 的静态图片有 4M 大小上限，而动态图 gif 文件没有。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>读VITS代码</title>
+    <link href="/2024/03/29/%E8%AF%BBVITS%E4%BB%A3%E7%A0%81/"/>
+    <url>/2024/03/29/%E8%AF%BBVITS%E4%BB%A3%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<p>总之就是读一下 vits（原论文标题：Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech）。vits， “Variational Inference with adversarial learning for end-to-end Text-to-Speech”，一个变分推理、对抗学习、端到端的 TTS 方法。论文团队给出了他们的示例代码。</p><h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>工程包含的文件：</p><ul><li><p>attentions.py：关于自注意力机制的部分，定义了 transformer 的结构。</p><ul><li>Encoder 类<ul><li>定义了参数和 forward 方法</li></ul></li><li>Decoder 类<ul><li>定义了参数和 forward 方法</li></ul></li><li>MultiHeadAttention 类<ul><li>定义了参数，forward 方法，attention 方法，_matmul_with_relative_values 方法，_matmul_with_relative_keys 方法，_get_relative_embeddings 方法，_relative_position_to_absolute_position 方法，_absolute_position_to_relative_position 方法，_attention_bias_proximal 方法</li></ul></li><li>FFN（前馈神经网络） 类<ul><li>定义了参数，forward 方法，_causal_padding 方法，_same_padding 方法。</li></ul></li></ul></li><li><p>commons.py：公用的一些常用方法</p><ul><li>定义了 init_weights 方法</li><li>定义了 get_padding 方法</li><li>定义了 convert_pad_shape 方法</li><li>定义了 intersperse 方法</li><li>kl_divergence 方法</li><li>rand_gumbel 方法</li><li>rand_gumbel_like 方法</li><li>slice_segments 方法</li><li>rand_slice_segments 方法</li><li>get_timing_signal_1d 方法</li><li>add_timing_signal_1d 方法</li><li>cat_timing_signal_1d 方法</li><li>subsequent_mask 方法</li><li>fused_add_tanh_sigmoid_multiply 方法：使用 @torch.jit.script 装饰</li><li>convert_pad_shape 方法</li><li>shift_1d 方法</li><li>sequence_mask 方法</li><li>generate_path 方法</li><li>clip<em>grad_value</em> 方法</li></ul></li><li><p>data_utils.py</p><ul><li>定义了 TextAudioLoader 类<ul><li>切分训练的时候使用的音频、文本</li></ul></li><li>定义了 TextAudioCollate 类<ul><li>批量整理文本、音频</li></ul></li><li>定义了多说话者版本 TextAudioSpeakerLoader 类<ul><li>类似 TextAudioLoader 但是是多说话者版本</li></ul></li><li>定义了 TextAudioSpeakerCollate 类<ul><li>类似 TextAudioCollate，但是是多说话者版本</li></ul></li><li>定义了 DistributedBucketSampler 类<ul><li>储存桶相关</li></ul></li></ul></li><li><p>losses.py：损失函数相关</p><ul><li>feature_loss 方法<ul><li>计算特征图（fmap）之间的差异</li></ul></li><li>discriminator_loss 方法<ul><li>计算判别器（Discriminator）的损失</li></ul></li><li>generator_loss 方法<ul><li>计算生成器（Generator）的损失</li></ul></li><li>kl_loss 方法<ul><li>计算KL散度损失，用于变分自编码器(VAE)</li></ul></li></ul></li><li><p>mel_processing.py：梅尔频谱处理<br>- </p></li><li>models.py</li><li>modules.py</li><li>preprocess.py</li><li>train.py</li><li>train_ms.py</li><li>transforms.py</li><li>utils.py</li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2024年3月18日</title>
     <link href="/2024/03/18/2024%E5%B9%B43%E6%9C%8818%E6%97%A5/"/>
     <url>/2024/03/18/2024%E5%B9%B43%E6%9C%8818%E6%97%A5/</url>
