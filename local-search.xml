@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>fastapi 程序移植到 django</title>
-    <link href="/2025/03/07/fastapi-%E7%A8%8B%E5%BA%8F%E7%A7%BB%E6%A4%8D%E5%88%B0-django/"/>
-    <url>/2025/03/07/fastapi-%E7%A8%8B%E5%BA%8F%E7%A7%BB%E6%A4%8D%E5%88%B0-django/</url>
+    <title></title>
+    <link href="/2025/10/14/%EF%80%BC!DOCTYPE%20html%EF%80%BE/"/>
+    <url>/2025/10/14/%EF%80%BC!DOCTYPE%20html%EF%80%BE/</url>
     
-    <content type="html"><![CDATA[<p>第一步，创建 django 模板（废话），然后创建 app。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">django-admin startproject project_name .<br>python manage.py startapp app_name<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<!DOCTYPE html><html lang="en">  <head>    <meta charset="UTF-8">    <title>ComfyUI</title>    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">    <link rel="stylesheet" type="text/css" href="user.css" />    <link rel="stylesheet" type="text/css" href="materialdesignicons.min.css" /><link rel="stylesheet" type="text/css" href="/launcher/assets/comfyui/remove-mixlab-ad.css?1719102140.0">    <script type="module" crossorigin src="./assets/index-Bv0b06LE.js"></script>    <link rel="stylesheet" crossorigin href="./assets/index-CBxvvAzM.css">  </head>  <body class="litegraph grid">    <div id="vue-app"></div>  </body></html>]]></content>
     
     
     
@@ -17,11 +17,37 @@
   
   
   <entry>
-    <title></title>
-    <link href="/2025/03/04/%3C!DOCTYPE%20html%3E/"/>
-    <url>/2025/03/04/%3C!DOCTYPE%20html%3E/</url>
+    <title>rl学习</title>
+    <link href="/2025/06/28/rl%E5%AD%A6%E4%B9%A0/"/>
+    <url>/2025/06/28/rl%E5%AD%A6%E4%B9%A0/</url>
     
-    <content type="html"><![CDATA[<!DOCTYPE html><html lang="en">  <head>    <meta charset="UTF-8">    <title>ComfyUI</title>    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">    <link rel="stylesheet" type="text/css" href="user.css" />    <link rel="stylesheet" type="text/css" href="materialdesignicons.min.css" /><link rel="stylesheet" type="text/css" href="/launcher/assets/comfyui/remove-mixlab-ad.css?1719102140.0">    <script type="module" crossorigin src="./assets/index-Bv0b06LE.js"></script>    <link rel="stylesheet" crossorigin href="./assets/index-CBxvvAzM.css">  </head>  <body class="litegraph grid">    <div id="vue-app"></div>  </body></html>]]></content>
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>毕设相关</title>
+    <link href="/2025/05/08/%E6%AF%95%E8%AE%BE%E7%9B%B8%E5%85%B3/"/>
+    <url>/2025/05/08/%E6%AF%95%E8%AE%BE%E7%9B%B8%E5%85%B3/</url>
+    
+    <content type="html"><![CDATA[<p>我的毕业设计基本告一段落了，在此记录一下。</p><p>是一个缝合了cnn与transformer的cvae，用于生成超透镜矩阵；用fastapi和bootstrap写了一个很简单的网站用来充当GUI。</p><p>虽然是我花了五个多月做的毕设，但仔细看看，客观上还是相当粗糙，远远谈不上完美，甚至可以说是草率。那么，我这么多时间都花在了哪里呢？</p><h1 id="存在的问题"><a href="#存在的问题" class="headerlink" title="存在的问题"></a>存在的问题</h1><p>问题有很多很多。</p><p>其一是准备不足。模型结构的选择上我犹豫了很长时间，最终选了并不是很适合图像任务的cvae。要是准备时我多找几篇参考论文，我就会发现在超透镜逆向设计领域，cvae已经被cINN之类更先进的模型取代了。</p><p>其二是一直在试错，尝试各种魔改的模型结构，却没想过到底是不是有用。</p><p>其三是最不该犯的一个错误：没有备份程序。连git都没有使用。以往，我会将程序复制几份，或者推送到github上，但是做毕设的时候不知为什么我没有这么做。直接结果是比较成功的一份模型定义被改烂了，之后试图复现但是复现不出来。</p><p>其四是基础知识太差劲，尤其是光学。其实神经网络相关的我也没好到哪去，像素洗牌、反卷积等等我是用到了才明白其特性。</p><h1 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h1><p>很简单的一个模型，是cvae，encoder部分用了conformer，并行推理cnn通道和transformer通道，提取到的特征输入一个三层的cnn进行融合，然后输出mu和logvar。decoder就是普普通通的反卷积上采样，魔改试图加上了交叉注意力用来引入条件（替代和z一起输入的方式），不过表现似乎并不好。</p><p>模型的输入是相位和参数的双通道矩阵。其实我是想做成8通道的，分别是相位、参数（一个或者两个，挖孔的会有两个）、结构种类（圆柱方柱挖孔之类的）、焦点处电磁响应（三层，三个焦点）、单元结构高度。不过，仿真只有方柱的数据，其他数据的没有仿真；电磁响应感觉我自己算出来不一定准确，没有cst仿真数据；而且一般来说单元结构都是一样高的，所以最后只有双通道的。</p><p>最成功的一版模型对细节的还原也很好，不过如上所述，被改烂了，没有复现出来。之后的模型对于细节的还原总感觉不到位。</p><p>decoder部分尝试过很多上采样，比如说像素洗牌，但是效果很烂。</p><p>decoder我试图使用了交叉注意力来引入条件，但并没有多好，甚至跟拼接的不分上下，可能是前面的就没做好，导致后面一起烂了。</p><p>我没敢使用GAN，之前尝试了但是效果不好、容易跑飞，所以就没用。但按理来说对于细节是有帮助的。现在想想感觉有点遗憾，应该试一试的。</p><p>我想过使用cst边训练边仿真，一个是用来生产数据，一个是用来验证效果并返回loss，但是算力要求太高。</p><p>另外我尝试着做了过程中可视化，把forward中的部分中间变量拿出来做可视化。虽然做出来了但我还是无法理解为什么中间变量是这么变化的。比如说倒数第二层上采样之前，图像下半部分数值高，倒数第一层突然就变均匀了。看到这个结果之后我想会不会是上采样层数太多，有点浪费了？</p><p>损失函数折腾了很多，但是和普普通通mse差别并不是很大；我自己写的一部分损失函数甚至会劣化效果。</p><h2 id="试错"><a href="#试错" class="headerlink" title="试错"></a>试错</h2><p>值得注意的是，我尝试过很多复杂的变种模型结构，但是效果甚至可能不如最基本的卷积+反卷积+拼接。为什么？我不理解。有不少甚至无法准确重建，或者说完全没有重建的意思。</p><h1 id="亮点"><a href="#亮点" class="headerlink" title="亮点"></a>亮点</h1><p>没什么亮点，或者说完全没有亮点。我的方案大概率只是别人挑剩下的方案，虽然我没有找到论文使用完全一样的方案，但一定有更好的，例如上面提到的cINN就是取代cvae的，能规避模式崩塌之类的cvae固有缺陷，客观上一定更好。</p><p>按理来说缝合cnn和transformer确实能兼顾全局和局部，但事实上conformer并没有流行开来，对比之下我认为根本不需要cnn来提取局部特征，注意力完全能够胜任兼顾所有特征的任务。</p><p>decoder部分用了交叉注意力，但是没有比FiLM的好多少，甚至不比拼接的好很多。</p><h1 id="另外"><a href="#另外" class="headerlink" title="另外"></a>另外</h1><p>我不知道为什么在图书馆会头晕？一开始我以为是主观上昏昏欲睡，一个月之后我才确定确实会有头晕的症状。我猜测可能是屏幕太小了，长时间盯着看？或许我应该试着换一个地方？</p><p>前几天回家用了显示屏，没有出现头晕的情况。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>fastapi 程序移植到 django</title>
+    <link href="/2025/03/07/fastapi-%E7%A8%8B%E5%BA%8F%E7%A7%BB%E6%A4%8D%E5%88%B0-django/"/>
+    <url>/2025/03/07/fastapi-%E7%A8%8B%E5%BA%8F%E7%A7%BB%E6%A4%8D%E5%88%B0-django/</url>
+    
+    <content type="html"><![CDATA[<p>第一步，创建 django 模板（废话），然后创建 app。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">django-admin startproject project_name .<br>python manage.py startapp app_name<br></code></pre></td></tr></table></figure>]]></content>
     
     
     
