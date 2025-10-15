@@ -4,7 +4,20 @@
   
   
   <entry>
-    <title></title>
+    <title>2025年10月15日-日志</title>
+    <link href="/2025/10/15/2025%E5%B9%B410%E6%9C%8815%E6%97%A5-%E6%97%A5%E5%BF%97/"/>
+    <url>/2025/10/15/2025%E5%B9%B410%E6%9C%8815%E6%97%A5-%E6%97%A5%E5%BF%97/</url>
+    
+    <content type="html"><![CDATA[<h2 id="近半年总结"><a href="#近半年总结" class="headerlink" title="近半年总结"></a>近半年总结</h2><p>较为重要的事项：</p><ol><li>考研初试复试</li><li>毕设</li><li>半途而废的线上实习</li><li>暑期学车</li></ol><p>目前学费一年 8000 元，住宿费一年 1200 元，总计 9200 元。<br>每月工资为 2500 元，包含 1500 元的 所内补贴和 1000 元的国家补贴，计划每月饮食及日常支出 控制在 1200 元，剩余 1300 元存下以备不时之需。<br>食堂价格较高，一餐约为 15~20 元，但是 10 月 13 日以后有 8 折优惠，外卖因地处偏远，同样不便宜。尽量还是在食堂就餐。</p><h2 id="装机"><a href="#装机" class="headerlink" title="装机"></a>装机</h2><p>装了一台 pc，能较为流畅完成日常任务和部分游戏，短期内没有购买显卡计划。<br>配置单如下：</p><ol><li>板 u 套装：topc 7945hx modt 平台，购于淘宝</li><li>散热器：利民 ss135，购于闲鱼</li><li>内存：32g 单条金邦巨蟹，6000c32，购于闲鱼</li><li>机箱：酷冷魔神x70，8 升小机箱，附带三个无光风扇，购于淘宝</li><li>开关：临时使用的开关，购于淘宝</li><li>硬盘：铠侠 xg8 1tb，健康度 99%，购于闲鱼</li><li>电源：先马白金 xt850，购于京东自营</li></ol><p>开销如下：</p><ol><li>板 u 套装：2053 元</li><li>Cpu 散热器+扣具+tf 7 硅脂：122 元</li><li>内存：560 元</li><li>机箱：174 元</li><li>开关：4 元</li><li>硬盘 xg 8：318 元 </li><li>电源：333 元<br>总计：3564 元</li></ol><h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><p>部分课程有作业，记得完成。</p><h2 id="导师任务"><a href="#导师任务" class="headerlink" title="导师任务"></a>导师任务</h2><p>代码尽快跑通，之后再尝试优化为 pytorch 版本。<br>积极与导师、学长交流。</p><h2 id="短期内计划"><a href="#短期内计划" class="headerlink" title="短期内计划"></a>短期内计划</h2><h2 id="学期内计划"><a href="#学期内计划" class="headerlink" title="学期内计划"></a>学期内计划</h2><ul><li></li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>关于光学神经网络</title>
     <link href="/2025/10/15/%E5%85%B3%E4%BA%8E%E5%85%89%E5%AD%A6%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
     <url>/2025/10/15/%E5%85%B3%E4%BA%8E%E5%85%89%E5%AD%A6%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
     
@@ -711,19 +724,6 @@
       <tag>日志</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>about</title>
-    <link href="/2023/01/16/index/"/>
-    <url>/2023/01/16/index/</url>
-    
-    <content type="html"><![CDATA[<p>本科阶段就读于信通学院电子信息工程专业，主要进行 NLP 领域 与 传统信号处理的学习。对人工智能与通信有一定的了解。跟随导师进行过传统自然语言处理专家系统的构建、简单的 django 网站开发、llama 神经网络部署与微调、使用 haystack 的 agent 系统构建。偏向于应用。</p><p>主要使用 python，正在学习 c++，有一定的 matlab、verilog 基础。对嵌入式开发有一定的了解。</p>]]></content>
-    
-    
     
   </entry>
   
